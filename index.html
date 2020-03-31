@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        blockquote, q {
+            quotes: none;
+        }
+
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+
+        b {
+            font-weight: 700;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        tr {
+            width: 30%;
+        }
+
+        tr:nth-child(even) {
+            background-color: #EFEFEF;
+        }
+
+        td:nth-child(even) {
+            text-align: right;
+        }
+
+        @media screen and (min-width: 900px) {
+
+            td {
+                padding: 2px 5px;
+                border-right: 3px solid white;
+            }
+
+            p {
+                margin-bottom: 10px;
+            }
+
+            li {
+                margin-bottom: 5px;
+            }
+
+            ol, ul {
+                padding-left: 20px;
+                margin-bottom: 10px;
+            }
+
+            .wrapper {
+                width: 900px;
+                margin: 0 auto;
+                font-family: Tahoma;
+                font-size: 0.9em;
+            }
+
+            .container {
+                padding: 20px 20px;
+                border: 1px solid #E3E4E8;
+                line-height: 1.4em;
+            }
+
+            .header {
+                background: #FFF url('https://www.peleng8.com/pic/titlewatch.jpg') 0 0 no-repeat;
+                height: 100px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-weight: bold;
+                font-size: 2em;
+            }
+
+            .description {
+                width: 100%;
+                margin-bottom: 20px;
+                border: 1px solid #E3E4E8;
+                padding: 20px 20px;
+            }
+
+            .specification {
+                display: flex;
+                margin-bottom: 30px;
+                width: 100%;
+            }
+
+            .specification__foto, .specification__about {
+                width: 50%;
+            }
+
+            .specification__foto, .characteristic__foto, .instruction__foto {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .specification__about_title, .characteristic__about_title, .instruction__about_title {
+                width: 100%;
+                margin-bottom: 10px;
+                color: white;
+                height: 43px;
+                display: flex;
+                align-items: center;
+                padding: 0 50px;
+            }
+
+            .specification__about_title {
+                background: #FFF url('https://www.peleng8.com/pic/specwatch.jpg') 0 0 no-repeat;
+                background-size: cover;
+            }
+
+            .characteristic__about_title {
+                background: #FFF url('https://www.peleng8.com/pic/charwatch.jpg') 0 0 no-repeat;
+                background-size: cover;
+            }
+
+            .instruction__about_title {
+                background: #FFF url('https://www.peleng8.com/pic/charwatch.jpg') 0 0 no-repeat;
+                background-size: cover;
+            }
+
+            .characteristic {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .characteristic__about, .characteristic__foto,
+            .instruction, .instruction__foto, .instruction__foto img,
+            .specification__foto img, .characteristic__foto img {
+                width: 100%;
+            }
+
+            .specification__foto img, .characteristic__foto img, .instruction__foto img {
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+
+            td {
+                padding: 2px 5px;
+                border-right: 3px solid white;
+            }
+
+            p {
+                margin-bottom: 10px;
+            }
+
+            li {
+                margin-bottom: 5px;
+            }
+
+            ol, ul {
+                padding-left: 20px;
+                margin-bottom: 10px;
+            }
+
+            .wrapper {
+                width: 100%;
+                margin: 0 auto;
+                font-family: Tahoma;
+                font-size: 0.9em;
+            }
+
+            .container {
+                padding: 20px 10px;
+                border: 1px solid #E3E4E8;
+                line-height: 1.4em;
+            }
+
+            .header {
+                background: #FFF url('https://www.peleng8.com/pic/titlewatch.jpg') 0 0 no-repeat;
+                height: 100px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-weight: bold;
+                font-size: 1.7em;
+            }
+
+            .description {
+                width: 100%;
+                margin-bottom: 20px;
+                border: 1px solid #E3E4E8;
+                padding: 20px 20px;
+            }
+
+            .specification {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column-reverse;
+                margin-bottom: 30px;
+                width: 100%;
+            }
+
+            .specification__foto, .specification__about {
+                width: 100%;
+            }
+
+            .specification__foto, .characteristic__foto, .instruction__foto {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .specification__about_title, .characteristic__about_title, .instruction__about_title {
+                width: 100%;
+                margin-bottom: 10px;
+                color: white;
+                height: 43px;
+                display: flex;
+                align-items: center;
+                padding: 0 50px;
+            }
+
+            .specification__about_title {
+                background: #FFF url('https://www.peleng8.com/pic/specwatch.jpg') 0 0 no-repeat;
+                background-size: cover;
+            }
+
+            .characteristic__about_title {
+                background: #FFF url('https://www.peleng8.com/pic/charwatch.jpg') 0 0 no-repeat;
+                background-size: cover;
+            }
+
+            .instruction__about_title {
+                background: #FFF url('https://www.peleng8.com/pic/charwatch.jpg') 0 0 no-repeat;
+                background-size: cover;
+            }
+
+            .characteristic {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .characteristic__about, .characteristic__foto,
+            .instruction, .instruction__foto, .instruction__foto img,
+            .specification__foto img, .characteristic__foto img {
+                width: 100%;
+            }
+
+            .specification__foto img, .characteristic__foto img, .instruction__foto img {
+                display: block;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="header">
+        <div>Single Hand Watch "Luch"</div>
+    </div>
+    <div class="container">
+        <div class="description">
+            <p>
+                Minsk Watch Plant "LUCH" is the only company in Belarus for the production of timing devices and one of
+                the few companies in the Soviet watchmaking industry which retains <b>full cycle</b> of production
+                of mechanical watches.
+            </p>
+            <p>
+                Minsk Watch Plant became famous primarily by brand "Luch", but also it has produced, such well-known
+                watch as "Zaria", "Vympel" and others. Since Soviet times, the plant produces car clocks and alarm
+                clocks. Today except brand "Luch" MWP offers watches Favorit and Sekonda.
+            </p>
+            <p>
+                In 2010, the <b>Swiss company "Franck Muller International B.V."</b> has became the investor
+                company, having signed an Investment Agreement with the Republic of Belarus.
+            </p>
+        </div>
+        <div class="specification">
+            <div class="specification__foto">
+                <img src="https://www.peleng8.com/pic/luch-77471760-rus-2-420.jpg" alt="">
+            </div>
+            <div class="specification__about">
+                <div class="specification__about_title">
+                    <div>SPECIFICATION</div>
+                </div>
+                <div class="specification__about_text">
+                    <p>
+                        One hand watch is a hand-wound mechanical shock resistant wristwatch from Luch. It's made on 15
+                        jewels and covered with mineral glass what makes this watch more durable. Vintage design makes
+                        them look great not only on the original strap but also on the strap in different colors. This
+                        watch makes your look extraordinary and stylish at the same time.
+                    </p>
+                    <p><b>Advantages</b></p>
+                    <ul>
+                        <li>Mechanical 1801.1</li>
+                        <li>15 jewels</li>
+                        <li>Shock resistant</li>
+                        <li>Original One Hand</li>
+                        <li>Quality management system ISO 9001.</li>
+                    </ul>
+                    <p>
+                        Luch one hand is an all-timer which will suit any time or place, will be the perfect partner to
+                        accompany you to every great occasion in your life so that every moment you live is right on
+                        time.
+                    </p>
+                    <p><b>It's time to be different!</b></p>
+                    <p><b>Kit:</b></p>
+                    <ul>
+                        <li>Watch - 1pc</li>
+                        <li>Strap - 1pc</li>
+                        <li>Passport - 1pc</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="characteristic">
+            <div class="characteristic__about_title">
+                <div>CHARACTERISTICS</div>
+            </div>
+            <div class="characteristic__about">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>Movement</td>
+                        <td>Mechanical Hand Wound. 1801.1</td>
+                    </tr>
+                    <tr>
+                        <td>Jewels</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>Dial Color</td>
+                        <td>White</td>
+                    </tr>
+                    <tr>
+                        <td>Logo Language</td>
+                        <td>Original in Russian</td>
+                    </tr>
+                    <tr>
+                        <td>Strap Material</td>
+                        <td>Leather</td>
+                    </tr>
+                    <tr>
+                        <td>Strap Width, mm / in</td>
+                        <td>20mm / 0.78in</td>
+                    </tr>
+                    <tr>
+                        <td>Glass</td>
+                        <td>Silicate Glass</td>
+                    </tr>
+                    <tr>
+                        <td>Case Cover</td>
+                        <td>Chrome</td>
+                    </tr>
+                    <tr>
+                        <td>Water-resistance</td>
+                        <td>Daily water resistant (not suitable for swimming)</td>
+                    </tr>
+                    <tr>
+                        <td>Dial type</td>
+                        <td>Arabic</td>
+                    </tr>
+                    <tr>
+                        <td>Running time per winding</td>
+                        <td>38 hours</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="characteristic__foto">
+                <img src="https://www.peleng8.com/pic/luch-77471760-rus-1-800.jpg" alt="">
+            </div>
+        </div>
+        <div class="instruction">
+            <div class="instruction__about_title">
+                <div>READ THE SINGLE-HAND WATCH</div>
+            </div>
+            <div class="instruction__foto">
+                <img src="https://www.peleng8.com/pic/readtime.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
